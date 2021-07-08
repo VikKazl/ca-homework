@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <title>FrontEnd</title>
+    <style>
+        #buttonSave{
+            margin-left: -20px;
+        }
+    </style>
+</head>
+<body>
+<div class="container pt-3">
+    <!-- Alert button -->
+    <div class="card mb-2">
+        <div class="card-header">
+            Paspaudus mygtuką iškvieskite
+            <code>alert('Hello world!')</code>
+        </div>
+        <div class="card-body text-center">
+            <button type="button" class="btn btn-outline-primary" onclick="myFunction()">Click on me</button>
+        </div>
+    </div>
+    <!-- Fill me in -->
+    <div class="card mb-2">
+        <div class="card-header">
+            Įvestai reikšmei priklausomai nuo paspausto mygtuko keičiame registrą (Didėles/Mažos raidės)
+        </div>
+        <div class="card-body">
+            <div class="input-group">
+                <input type="text" class="form-control" placeholder="Fill me in" aria-label="Fill me in" aria-describedby="basic-addon2">
+                <div class="input-group-append">
+                    <button class="btn btn-outline-secondary" type="button" onclick="capInputs();">To Upper Case</button>
+                    <button class="btn btn-outline-secondary" type="button" onclick="lowInputs();">To Lower Case</button>
+                    <button class="btn btn-outline-secondary" type="button">First Upper Case</button>
+                    <button class="btn btn-outline-secondary" type="button">First Lower Case</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Email -->
+    <div class="card mb-2">
+        <div class="card-header">
+            Paspaudus mygtuką patikrinkite įvestas reikšmes ir jeigu reikia parodykite klaidų pranešimus
+            <ul class="mt-1 mb-0">
+                <li>element show/hide</li>
+                <li>class add/remove</li>
+            </ul>
+        </div>
+        <form id="myform">
+            <div class="form-group row mt-3 px-3">
+                <label for="inputEmail" class="col-sm-2 col-form-label">Email</label>
+                <div class="col-sm-10">
+                    <input type="email" class="form-control" id="inputEmail" placeholder="Enter Email">
+                </div>
+            </div>
+            <div class="form-group row mt-3 px-3">
+                <label for="inputPhoneNumber" class="col-sm-2 col-form-label">Phone Number</label>
+                <div class="col-sm-10">
+                    <input type="PhoneNumber" class="form-control" id="inputPhoneNumber" name="phone" placeholder="Enter Phone Number">
+                </div>
+            </div>
+            <div class="form-group row mb-3 px-5">
+                <div class="col-sm-10 offset-sm-2 mt-3 mb-4">
+                    <button type="submit" class="btn btn-outline-dark" id="buttonSave">Save</button>
+                </div>
+            </div>
+        </form>
+    </div>
+    <!-- Block/Unblock -->
+    <div class="card mb-2">
+        <div class="card-header">
+            Paspaudus mygtuką užblokuokite/atblokuokite
+            <code>input</code>
+        </div>
+        <div class="card-body">
+            <div class="input-group">
+                <button class="btn btn-outline-danger" type="button" onclick="disable()">Block</button>
+                <input type="text" id="text_entered" class="form-control" placeholder="I'm input! You can try to enter something..." aria-describedby="basic-addon2">
+                <div class="input-group-append">
+                    <button class="btn btn-outline-success" type="button" onclick="enable()">Unblock</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Picture change -->
+        <div class="card mb-2">
+            <div class="card-header">
+                Užvedus ant paveiksliuko pakeiskite jį
+                <ul class="mt-1 mb-0">
+                    <li>
+                        <a href="#">https://i.imgur.com/PLDVxza.jpg</a>
+                    </li>
+                    <li>
+                        <a href="#">https://i.imgur.com/0DElr0H.jpg</a>
+                    </li>
+                </ul>
+            </div>
+        <div class="card">
+            <div class="text center mt-3 mb-3">
+                <img src="https://i.imgur.com/0DElr0H.jpg" class="rounded mx-auto d-block" id="image" alt="monkeys">
+            </div>
+        </div>
+        </div>
+    <!-- Buttons -->
+    <div class="card mb-2">
+        <div class="card-header">
+            Paspaudus ant mygtuko turi "iškristi" meniu su punktais. Paspaudus ketvirtą mygtuką turi įvykti veiksmas
+        </div>
+        <div class="card-body">
+            <p class="lead text-end">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.
+            <p class="text-end">- Someone famous in Source Title
+            </p>
+            </p>
+        <div class="btn-group">
+            <button type="button" class="btn btn-outline-danger dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                Cursors
+            </button>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">Text</a></li>
+                    <li><a class="dropdown-item" href="#">Copy</a></li>
+                    <li><a class="dropdown-item" href="#">Move</a></li>
+                    <li><hr class="dropdown-divider"></li>
+                    <li><a class="dropdown-item" href="#">Zoom-in</a></li>
+                </ul>
+        </div>
+        <div class="btn-group">
+            <button type="button" class="btn btn-outline-danger dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                Colours
+            </button>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">Green</a></li>
+                    <li><a class="dropdown-item" href="#">Yellow</a></li>
+                    <li><a class="dropdown-item" href="#">Blue</a></li>
+                    <li><hr class="dropdown-divider"></li>
+                    <li><a class="dropdown-item" href="#">Orange</a></li>
+                </ul>
+        </div>
+        <div class="btn-group">
+            <button type="button" class="btn btn-outline-danger dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                    Borders
+            </button>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">Green</a></li>
+                    <li><a class="dropdown-item" href="#">Yellow</a></li>
+                    <li><a class="dropdown-item" href="#">Blue</a></li>
+                    <li><hr class="dropdown-divider"></li>
+                    <li><a class="dropdown-item" href="#">Orange</a></li>
+                </ul>
+        </div>
+            <button type="button" class="btn btn-outline-success">Reset All</button>
+        </div>
+    </div>
+    <!-- Launch modal -->
+    <div class="card mb-2">
+        <div class="card-header">
+            Paspaudus mygtuką parodykite informaciją apie save modaliniame lange
+        </div>
+    <div class="card-body text-center">
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">Launch modal
+            </button>
+    </div>
+    </div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                Dar yra kur mokintis ir tobulėti
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+<script src="app.js"></script>
+</body>
+</html>
