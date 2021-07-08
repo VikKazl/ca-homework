@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hover blocks</title>
+    <style>
+        span.a {
+            display: inline-block;
+            width: 60px;
+            height: 60px;
+            padding: 5px;
+            margin: 0px 3px;
+            background-color: #009abf;
+        }
+        span.a:nth-child(odd){
+            background-color: black;
+        }
+        span.a:hover {
+            background-color: #ff9f19;
+        }
+    </style>
+</head>
+<body>
+<p>Colors: #ff9f19, #009abf</p>
+<span class="a"></span>
+<span class="a"></span>
+<span class="a"></span>
+<span class="a"></span>
+<span class="a"></span>
+</body>
+</html>

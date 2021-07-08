@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Circle&Square</title>
+  <style>
+    .color-wheel {
+      --num-colors: 12;
+      --color-size: calc(100% / var(--num-colors));
+      width: 100px;
+      height: 100px;
+      position: relative;
+      border-radius: 50%;
+      background: conic-gradient(
+              #95CD8B calc(0 * var(--color-size)) calc(1 * var(--color-size)),
+              #95CD8B calc(1 * var(--color-size)) calc(2 * var(--color-size)),
+              #D0E6BB calc(2 * var(--color-size)) calc(3 * var(--color-size)),
+              #D0E6BB calc(3 * var(--color-size)) calc(4 * var(--color-size)),
+              #D0E6BB calc(4 * var(--color-size)) calc(5 * var(--color-size)),
+              #95CD8B calc(5 * var(--color-size)) calc(6 * var(--color-size)),
+              #95CD8B calc(6 * var(--color-size)) calc(7 * var(--color-size)),
+              #95CD8B calc(7 * var(--color-size)) calc(8 * var(--color-size)),
+              #95CD8B calc(8 * var(--color-size)) calc(9 * var(--color-size)),
+              #95CD8B calc(9 * var(--color-size)) calc(10 * var(--color-size)),
+              #95CD8B calc(10 * var(--color-size)) calc(11 * var(--color-size)),
+              #95CD8B calc(11 * var(--color-size)) calc(12 * var(--color-size))
+      );
+      transform: rotate(calc(-180deg / var(--num-colors)));
+    }
+
+    .color-wheel::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      border-radius: 50%;
+      background: #ECF5E4;
+      width: 50%;
+      height: 50%;
+      transform: translate(-50%, -50%);
+    }
+    h3 {
+      font-size: x-large;
+      font-family: "Times New Roman", sans-serif;
+      position: relative;
+      left: 25px;
+      top: -85px;
+    }
+    .square {
+        width: 60px;
+        height: 60px;
+        background: #ECF5E4;
+        border-top: #95CD8B 20px solid;
+        border-right: #D0E6BB 20px solid;
+        border-bottom: #95CD8B 20px solid;
+        border-left: #95CD8B 20px solid;
+    }
+  </style>
+</head>
+<body>
+<p>Colors: #ECF5E4, #95CD8B, #D0E6BB</p>
+<div class="color-wheel"></div>
+<h3>75%</h3>
+<div class="square"></div>
+<h3>75%</h3>
+
+</body>
+</html>

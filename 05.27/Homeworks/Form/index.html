@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Form</title>
+    <style>
+        textarea {
+            color: darkgray;
+            text-align: initial;
+        }
+    </style>
+</head>
+<body>
+<h1><b>Registracija į kursus</b></h1>
+<hr>
+<!--<p class="groove"></p>-->
+<form action="/action_page.php" method="get" name="registrationForm">
+    <label for="fname">Vardas:</label>
+    <input type="text" id="fname" name="fname">
+    <br>
+    <br>
+    <h2>Programavimo kalba:</h2>
+    <label for="C++">C++</label>
+    <input type="radio" name="registrationForm" id="C++" value="C++">
+    <br>
+    <label for="php">PHP</label>
+    <label for="PHP"></label>
+    <input id="PHP" name="registrationForm" type="radio" value="PHP">
+    <br>
+    <label for="Payton">Payton</label>
+    <input type="radio" name="registrationForm" id="Payton" value="Payton">
+    <br>
+    <br>
+    <h3>Papildoma informacija</h3>
+    <label for="papildoma informacija"></label>
+    <textarea id="papildoma informacija" name="papildoma informacija" rows="4" cols="50">
+  Pvz.: turite C++ programavimo patirties</textarea>
+        <p style="font-size:20px" >Slaptažodis:</p>
+      <br>
+    <br>
+    <input type="submit" value="Siųsti">
+</form>
+</body>
+</html>

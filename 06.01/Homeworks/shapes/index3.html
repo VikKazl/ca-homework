@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Shapes</title>
+  <style>
+    #outer-circle {
+      background: #95CD8B;
+      border-radius: 50%;
+      height: 90px;
+      width: 90px;
+      position: relative;
+    }
+    #inner-circle {
+      position: absolute;
+      background: #ECF5E4;
+      border-radius: 50%;
+      height: 60px;
+      width: 60px;
+      top: 50%;
+      left: 50%;
+      margin: -30px 0px 0px -30px;
+    }
+    p {
+        font-weight: bold; font-size: x-large;
+        font-family: "Times New Roman", sans-serif;
+        position: relative;
+        left: 8px;
+        top: -6px;
+    }
+    .rotated-circle {
+        background: #D0E6BB;
+        border-radius: 50%;
+        height: 90px;
+        width: 90px;
+        position: relative;
+
+    }
+
+  </style>
+</head>
+
+<body>
+<h3>Colors: #ECF5E4, #95CD8B, #D0E6BB</h3>
+<div id="outer-circle">
+  <div id="inner-circle">
+      <p>75%</p>
+      <div class="rotated-circle"></div>
+      <div class="cutout"></div>
+  </div>
+
+</div>
+
+</body>
+</html>
